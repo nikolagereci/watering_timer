@@ -10,6 +10,10 @@ input.onButtonPressed(Button.B, function () {
     basic.showString("I" + interval)
 })
 
+input.onButtonPressed(Button.AB, function () {
+    water(watering_period)
+})
+
 function water(watering_period: number) {
     pins.digitalWritePin(DigitalPin.P2, 0)
     basic.pause(watering_period * MINUTE)
